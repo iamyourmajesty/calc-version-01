@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/child"
+    android:backgroundTint="#DFD9D9"
     tools:context=".MainActivity">
 
 
@@ -12,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="Enter first number"
@@ -22,27 +24,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/op"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="98dp"
-        android:ems="10"
-        android:hint="Enter operator"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/num1" />
 
     <EditText
         android:id="@+id/num2"
         android:layout_width="216dp"
         android:layout_height="50dp"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="92dp"
         android:ems="10"
         android:hint="Enter second number"
@@ -57,7 +45,8 @@
         android:layout_width="183dp"
         android:layout_height="57dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#9E1A1A"
         android:text="Solve"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,11 +56,52 @@
         android:id="@+id/textView4"
         android:layout_width="118dp"
         android:layout_height="57dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="15dp"
         android:text="Result"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <RadioGroup
+        android:id="@+id/op"
+        android:layout_width="333dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="ADDITION" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBTRACTION" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MULTIPLICATION" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIVISION" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODULUS" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
