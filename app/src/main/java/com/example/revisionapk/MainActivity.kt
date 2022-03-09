@@ -2,6 +2,7 @@ package com.example.revisionapk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -77,29 +78,44 @@ class MainActivity : AppCompatActivity() {
 
 
             button2.setOnClickListener{
-                var a:Int ?= null
-                var b:Int ?= null
+                var a:Int
+                var b:Int
+                 if(TextUtils.isEmpty(num1.text.toString()) && TextUtils.isEmpty(num2.text.toString()))
+            {
+                Toast.makeText(this,"Enter the numbers first",Toast.LENGTH_SHORT).show()
+            }
+              else  if(TextUtils.isEmpty(num1.text.toString()))
+                {
+                    Toast.makeText(this,"Enter first number",Toast.LENGTH_SHORT).show()
+                }
+                else if(TextUtils.isEmpty(num2.text.toString()))
+                {
+                    Toast.makeText(this,"Enter second number",Toast.LENGTH_SHORT).show()
+                }
+                else
+                {
+                    a=num1.text.toString().toInt()
+                    b = num2.text.toString().toInt()
 
-                 a=num1.text.toString().toInt()
-                 b = num2.text.toString().toInt()
+                    var res=0
+                    //
+                    when(str){
+                        "+" -> {res=a+b}
+                        "-" -> {res=a-b}
+                        "*" -> {res=a*b}
+                        "/" -> {res=a/b}
+                        "%" -> {res=a%b}
+                        else -> {res=a+b}
 
-                var res=0
-               //
-                when(str){
-               "+" -> {res=a+b}
-               "-" -> {res=a-b}
-               "*" -> {res=a*b}
-               "/" -> {res=a/b}
-               "%" -> {res=a%b}
-               else -> {res=a+b}
-
-           }
+                    }
 
 
 
 
 
-                textView4.text=res.toString()
+                    textView4.text=res.toString()
+                    Toast.makeText(this,"Output is " + textView4.text.toString(),Toast.LENGTH_SHORT).show()
+                }
 
             }
 
