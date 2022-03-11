@@ -1,24 +1,24 @@
-# Headlines Of Day 
+# CALC-version-01 
 
 ## *Prince Pandey*
 
-**Headlines Of Day** promotes the user to read headlines of that moment going all around the world.
+**Calc-version-01** promotes the user to add,subs,mulltiply,divide and calculate modulus of two numbers.
 
-Time spent: **7** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Functionality 
 
 The following **required** functionality is completed:
 
-* [x] User can scroll down for further news.
-* [x] The user see different news on scrolling down.
-* [x] The user can read more about the headline by just clicking on that headline.
+* [x] User can write input in input section.
+* [x] The user can selected operator through radio-buttons.
+* [x] The user can get result by just clicking on solve button.
 
 The following **extensions** are implemented:
 
 * [x] Custom colors selected
-* [x] api call used through volley
-* [ ] Recycle view is implemented
+* [x] radio buttons are used
+* [x] checked whether user is filling input or not by isEmpty function
 
 ## Video Walkthrough
 
